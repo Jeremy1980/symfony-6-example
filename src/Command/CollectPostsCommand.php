@@ -43,7 +43,7 @@ class CollectPostsCommand extends Command
         {
             return Command::FAILURE;
         }
-        
+
         $ids = $repoU->getAll();
         $aliases = array();
 
@@ -56,7 +56,7 @@ class CollectPostsCommand extends Command
                 $aliases[$data['id']] = $matchedKey;
             } else {
                 $data['roles'] = array('role'=>'ROLE_AUTHOR');
-                
+
                 $u = $repoU->insert($data);
                 $em->flush();
 

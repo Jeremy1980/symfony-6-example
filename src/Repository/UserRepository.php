@@ -67,20 +67,17 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->save($user, true);
     }
 
-    /**
-     * @return VinylMix[] Returns an array of VinylMix objects
-     */
     public function getAll(): array
     {
         $rsm = (new ResultSetMapping())
         ->addScalarResult('id', 'id')
-        ->addScalarResult('email', 'email');        
+        ->addScalarResult('email', 'email');
         $result = $this->getEntityManager()->createNativeQuery('SELECT id,email FROM user', $rsm)->getArrayResult();
 
         $ids = array_column($result, 'id');
         $emails = array_column($result, 'email');
 
         return array_combine($ids, array_map('strtolower', $emails));
-    }    
+    }
 
 }
