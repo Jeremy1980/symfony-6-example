@@ -7,4 +7,4 @@
 ### Autoryzacja
 KONTO: admin@kozacki.pl HASŁO: admin
 ### API
-- /api/post &ensp;&ensp; Pobieranie wyszystkich postów z lokalnej bazy danych.
+- /api/posts &ensp;&ensp; Pobieranie wyszystkich postów z lokalnej bazy danych.
