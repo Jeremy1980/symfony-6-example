@@ -3,7 +3,6 @@
 {% block title %}Lista pobranych postów{% endblock %}
 
 {% block body %}
-<main class="container my-5">
     {% if warning %}
         <div class="alert alert-warning">{{ warning }}</div>
     {% endif %}
@@ -39,5 +38,4 @@
             {% endfor %}
         </tbody>
     </table>
-</main>
 {% endblock %}
