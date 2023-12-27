@@ -8,6 +8,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
+use Gregwar\CaptchaBundle\Type\CaptchaType;
+
+
 class ResetPasswordRequestFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
@@ -21,6 +24,7 @@ class ResetPasswordRequestFormType extends AbstractType
                     ]),
                 ],
             ])
+            ->add('captcha', CaptchaType::class)
         ;
     }
 

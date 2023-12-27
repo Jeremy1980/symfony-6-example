@@ -27,6 +27,8 @@
             label: 'Akceptuje regulamin'
         }) }}
 
+        {{ form_row(registrationForm.captcha ,{label: ' '} ) }}
+
         <button type="submit" class="btn btn-primary">Utwórz konto</button>
         </fieldset>
     {{ form_end(registrationForm) }}
